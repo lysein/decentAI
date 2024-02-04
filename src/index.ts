@@ -26,14 +26,6 @@ export default Canister({
         // Convert the embeddings to a string or any other desired format
         message = embeddings.toString();
 
-        // message = "[0.1,-0.1,-0.2]"; // we transform documents in to vectorspaces so that we can create a multi dimentional vector space in which vectors close together have semantic similarity!
-        // then we can query that vector DB to do Retrieval Augmented Generation workloads
-        // Having decentralized endpoints to run AI services is a crucial step forward in the AI lifecycle
-        // mainly because of the censorship ressitance
-        // by implementing this project we will be replacing the call to OpenAIEmbeddings (cell number [15]) which is a centralized endpoint
-        // and also replacing HuggingFaceInstructEmbeddings (cell number [59]) which is also centralized
-        // but most importantly it requires the user to provision the hardware neccesary to run the model
-        // see: https://github.com/carlosarturoceron/online_learning_assistant/blob/dev/src/Q1/second_course/second_course.ipynb
     })
 });
 
