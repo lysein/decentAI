@@ -44,6 +44,10 @@ embeddings = model.encode(sentences)
 
 In this hack we validate if we could write "on chain" a pretrained model and then rebuilt it on the running canister with the purpose of generating predictions. If this is possible we would be unlocking a potential milestone towards the decentralization of AI workloads!
 
+Some initial limitations were related to the size of model we could upload, initially tried with 900Mb, after knowing the limitation was closer to 90Mb I was able to find this model <90kB. Note: 90mB models are extreamly capable not an issue, and if capacity keeps increasing it's promising.
+
+Model: https://www.kaggle.com/models/tensorflow/spam-detection/frameworks/tfJs
+
 Technical conclusions: IT WORKED!
 
 ## How to Run:
@@ -51,4 +55,5 @@ Follow the steps at: https://github.com/demergent-labs/azle/blob/main/examples/h
 Checkout: https://github.com/demergent-labs/azle/tree/main
 
 Built with <3 at ETH 5 de mayo
+Big thanks to the ICP team & all mentors that helped me out.
 ```
