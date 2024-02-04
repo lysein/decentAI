@@ -1,49 +1,49 @@
 # decentAI (decentralizedAI)
 
-## Problem
+## How can we think about AI?
+AI: software that presents one or more human capabilities.
+
+Seeing, reading, writing, speaking, analyzing, deciding.
+
+## The Problem: it's centralized
+
+If you want to run a large scale AI without having the tech knowledge on how train & deploy ML models for prediction you rely on consuming them trough something like this:
+
+https://bigCorpo.com/coolName/humanLikeBehavior (And they reserve the right of admission)
+
+This is a HUGE problem:
+
+Because AI is a catalyst for productivity. The problem is that one individual/company/nation can use AI and another cannot. The AI community is aware of this and that's why most of the developments are opensource.
+
+In the most popular AI platform there are more than 10,000 pre-trained open source models. 
+How could we decentralize them?
 
 ## Solution
 
-## Notes
+The proposed solution leverages AZLE,  a TypeScript/JavaScript runtime for building applications (canisters) on the IC. With AZLE it will possible to build & deploy REST API's to deliver decentralized AI workloads that inherit the benefits of the IC.
 
-This would be the modfied dfx.json to upload the model in src/assets.
-Info about the model: https://www.kaggle.com/models/tensorflow/spam-detection/frameworks/tfJs?select=group1-shard1of1.bin
-Choose this because it's a really lightweight model, due to the current 90Mb limitation to the files under "assets"
-Only 90kB.
+To use a pretrained model you need to download the model to some storage & then load it, or load it directly from the web without storing it. 
 
-{
-    "canisters": {
-        "decentAI": {
-            "type": "custom",
-            "main": "src/index.ts",
-            "candid": "src/index.did",
-            "build": "npx azle decentAI",
-            "wasm": ".azle/decentAI/decentAI.wasm",
-            "assets": [["src/assets/archive/group1-shard1of1.bin", "models"], ["src/assets/archive/labels.txt", "models"], ["src/assets/archive/model.json", "models"], ["src/assets/archive/vocab", "models"]],
-            "gzip": true
-        }
-    }
-}
+In python, this is as easy as doing:
+
+```python
+from sentence_transformers import SentenceTransformer
+# Specify the model name or path
+model_name = 'paraphrase-MiniLM-L6-v2'
+# Download the pre-trained model
+model = SentenceTransformer(model_name)
+# Example usage
+sentences = ["This is an example sentence.", "Download a Sentence Transformer model."]
+embeddings = model.encode(sentences)
+```
+
+In this hack we validate if we could write "on chain" a pretrained model and then rebuilt it on the running canister with the purpose of generating predictions. If this is possible we would be unlocking a potential milestone towards the decentralization of AI workloads!
+
+Technical conclusions: IT WORKED!
 
 ## How to Run:
-Follow the steps at: https://github.com/carlosarturoceron/azle/blob/main/examples/hello_world/README.md
+Follow the steps at: https://github.com/demergent-labs/azle/blob/main/examples/hello_world/README.md
+Checkout: https://github.com/demergent-labs/azle/tree/main
 
 Built with <3 at ETH 5 de mayo
-
-### Current Issue
-
-I need to not use fetch to load tensorflow model. Looking in to it.
-
-```
-Call was rejected:
-Request ID: d71e4f71016557c8c162c46b03600c3e20e771b6d23356b55fc7d0ee1b523b43
-Reject code: 5
-Reject text: Canister bkyz2-fmaaa-aaaaa-qaaaq-cai trapped explicitly: Uncaught TypeError: cannot read property 'fetch' of undefined at HTTPRequest (azle_main:71968)
-at http (azle_main:72110)
-at browserHTTPRequest (azle_main:72113)
-at loadLayersModel (azle_main:82892)
-at <anonymous> (azle_main:113218)
-at getResult (azle_main:61649)
-at executeMethod (azle_main:61623)
-at <anonymous> (azle_main:61688)
 ```
