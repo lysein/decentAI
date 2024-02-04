@@ -10,7 +10,7 @@
         "canister_call_set_message": "dfx canister call decentAI setMessage '(\"Hello world!\")'"
     },
     "dependencies": {
-        "@tensorflow/tfjs-node": "^4.17.0",
+        "@tensorflow/tfjs": "^4.17.0",
         "azle": "0.20.0"
     }
 }
