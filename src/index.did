@@ -1,0 +1,4 @@
+service: () -> {
+    embed: (text) -> ();
+    getMessage: () -> (text) query;
+}
