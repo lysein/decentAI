@@ -7,16 +7,21 @@ Seeing, reading, writing, speaking, analyzing, deciding.
 
 ## The Problem: it's centralized
 
-If you want to run a large scale AI without having the tech knowledge on how train & deploy ML models for prediction you rely on consuming them trough something like this:
+If you want to run a large scale AI without having the tech knowledge on how to train & deploy ML models for prediction you rely on consuming them trough something like this:
 
 https://bigCorpo.com/coolName/humanLikeBehavior (And they reserve the right of admission)
 
 This is a HUGE problem:
 
-Because AI is a catalyst for productivity. The problem is that one individual/company/nation can use AI and another cannot. The AI community is aware of this and that's why most of the developments are opensource.
+Because AI is a catalyst for productivity. The problem is that one individual/company/nation can use AI and another cannot. 
 
-In the most popular AI platform there are more than 10,000 pre-trained open source models. 
-How could we decentralize them?
+* The AI community is aware of this and that's why most of the models are opensource.
+
+In the most popular AI platform there are more than 10,000 pre-trained open source models.
+
+The models are already opensource!
+
+`How can we decentralize them?`
 
 ## Solution
 
