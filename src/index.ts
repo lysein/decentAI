@@ -17,7 +17,7 @@ export default Canister({
         
         // It would look something like this:
         // // Load the TensorFlow.js model from the SavedModel
-        // const model = await tf.loadLayersModel('file:///Users/satoshi/Torah/1_Github/kool/hello_world_smallmodel/src/assets/archive/model.json'); // Note the three slashes after file: in the URL. This is the correct format for file URLs.
+        // const model = await tf.loadLayersModel('/Users/satoshi/Torah/decentAI/src/archive'); // Note the three slashes after file: in the URL. This is the correct format for file URLs.
 
         // // Prepare input data
         // const sentences = newMessage.split(','); // Assuming newMessage is a comma-separated string
