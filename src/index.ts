@@ -2,6 +2,7 @@ import { Canister, query, text, update, Void } from 'azle';
 import * as tf from '@tensorflow/tfjs';
 import * as fs from 'fs/promises';
 
+
 // This is a global variable used to store the embeddings
 let message = '';
 
