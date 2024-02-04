@@ -6,8 +6,8 @@
             "candid": "src/index.did",
             "build": "npx azle decentAI",
             "wasm": ".azle/decentAI/decentAI.wasm",
+            "assets": [["src/assets/archive/group1-shard1of1.bin", "models"], ["src/assets/archive/labels.txt", "models"], ["src/assets/archive/model.json", "models"], ["src/assets/archive/vocab", "models"]],
             "gzip": true
         }
     }
 }
-
